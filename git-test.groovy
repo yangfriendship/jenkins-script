@@ -1,12 +1,15 @@
+#!/usr/bin/env groovy
+
 pipeline {
     agent any
 
-    stages('Test Hello') {
+    stages {
         stage('Hello') {
             steps {
                 retry(2) {
                     sh 'pwd'
                     sh 'ls -al'
+                    print('${woojung}')
                 }
             }
         }
