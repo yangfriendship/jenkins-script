@@ -13,6 +13,7 @@ pipeline {
         }
     }
 }
+
 void print(message) {
     echo "${message}"
 }
