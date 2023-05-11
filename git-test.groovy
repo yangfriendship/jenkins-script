@@ -1,8 +1,8 @@
+def rootDir = pwd()
+print(rootDir)
+
 pipeline {
     agent any
-
-    def rootDir = pwd()
-    print(rootDir)
 
     stages {
         stage('Hello') {
