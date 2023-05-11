@@ -7,7 +7,7 @@ pipeline {
                     sh 'pwd'
                     sh 'ls -al'
                 }
-                def hello = load './steps/hello.groovy'
+                def hello = load 'steps/hello.groovy'
                 hello.hello()
             }
         }
