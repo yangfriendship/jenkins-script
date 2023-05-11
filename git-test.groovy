@@ -7,8 +7,9 @@ pipeline {
                     sh 'pwd'
                     sh 'ls -al'
                 }
-                def hello = load 'steps/hello.groovy'
-                hello.hello()
+                def rootDir = pwd()
+//                def exampleModule = load "${rootDir}@script/Example.Groovy "
+                print(rootDir)
             }
         }
     }
