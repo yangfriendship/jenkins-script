@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    def hello = load './steps/hello.groovy'
     stages {
         stage('Hello') {
             steps {
@@ -8,6 +7,7 @@ pipeline {
                     sh 'pwd'
                     sh 'ls -al'
                 }
+                def hello = load './steps/hello.groovy'
                 hello.hello()
             }
         }
