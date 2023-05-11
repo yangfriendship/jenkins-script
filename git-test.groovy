@@ -8,9 +8,6 @@ pipeline {
                     sh 'pwd'
                     sh 'ls -al'
                 }
-                step {
-                    print('????')
-                }
             }
         }
     }
