@@ -1,5 +1,9 @@
 pipeline {
     agent any
+
+    def rootDir = pwd()
+    print(rootDir)
+
     stages {
         stage('Hello') {
             steps {
@@ -7,9 +11,7 @@ pipeline {
                     sh 'pwd'
                     sh 'ls -al'
                 }
-                def rootDir = pwd()
-//                def exampleModule = load "${rootDir}@script/Example.Groovy "
-                print(rootDir)
+
             }
         }
     }
