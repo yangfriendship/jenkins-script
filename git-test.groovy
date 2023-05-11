@@ -10,6 +10,7 @@ pipeline {
                     sh 'pwd'
                     sh 'ls -al'
                     print("$name")
+                    sh 'printenv'
                 }
             }
         }
